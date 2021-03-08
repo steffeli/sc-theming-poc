@@ -28,8 +28,13 @@ const ThemingContainer = styled("div")`
   height: fit-content;
 `;
 
-const clinicTheme = createTheme("clinic");
-const peopleTheme = createTheme("people");
+const clinicTheme = createTheme("clinic", {
+  clinicSpecificProp: "red",
+});
+
+const peopleTheme = createTheme("people", {
+  peopleSpecificProp: "blue",
+});
 
 function App() {
   return (
