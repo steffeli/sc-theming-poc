@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ColorGrade, colors } from "../theme/colors";
+import { colors } from "../theme/colors";
 import { theme } from "../theme";
 
 const buttonBackgroundColor = theme("mode", {
@@ -7,11 +7,10 @@ const buttonBackgroundColor = theme("mode", {
   people: colors.bruise[500],
 });
 
-const buttonHoverBackgroundColor = (props: any) =>
-  theme("mode", {
-    clinic: colors.surgical[props.theme.hoverGrade as ColorGrade],
-    people: colors.bruise[700],
-  });
+const buttonHoverBackgroundColor = theme("mode", {
+  clinic: colors.surgical[700],
+  people: colors.bruise[700],
+});
 
 const Button = styled("button")`
   padding: 1rem 2rem;
